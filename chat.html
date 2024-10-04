@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat - Cardinal Connect</title>
+    <link rel="stylesheet" href="newstyle.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- Unicons CSS -->
+    <link rel="stylesheet" href="line.css">
+   <script src="script.js" defer=""></script>
+     <!-- Modal goes above app.js, for dependency reasons. -->
+     <script src="modal.js"></script>
+     <script src="app.js"></script>
+  </head>
+  <body>
+    <nav class="nav">
+      <i class="uil uil-bars navOpenBtn"></i>
+            <div class="logo">
+            <img src="logo.png" alt="Logo">
+            </div>
+      <ul class="nav-links">
+        <i class="uil uil-times navCloseBtn"></i>
+        <li><a href="index.html">Index</a></li>
+        <li><a href="tips.html">Tips</a></li>
+        <li><a href="map.html">Map</a></li>
+        <li><a href="therapist.html">Therapist</a></li>
+        <li><a href="Events.html">Events</a></li>
+        <li><a href="chat.html">chat</a></li>
+        </ul>
+    </nav>
+	<div class="containerhome">
+        <h1 class="website-name">Chat</h1>
+        <div class="app">
+            <!-- Login and Registration Section -->
+            <div id="loginSection" class="auth-section">
+                <h1>BrainMate</h1>
+                <div class="auth-form">
+                    <div class="auth-input">
+                        <input type="text" id="loginUsernameInput" placeholder="Username">
+                    </div>
+                    <div class="auth-input">
+                        <input type="password" id="loginPasswordInput" placeholder="Password">
+                    </div>
+                    <button onclick="login()">Login</button>
+                    <div class="auth-separator">or</div>
+                    <div class="auth-input">
+                        <input type="text" id="registerUsernameInput" placeholder="Username">
+                    </div>
+                    <div class="auth-input">
+                        <input type="password" id="registerPasswordInput" placeholder="Password">
+                    </div>
+                    <button onclick="register()">Register</button>
+                </div>
+            </div>
+    
+            <!-- Chat Section -->
+            <div id="chatSection" class="chat-section" style="display: none;">
+                <div class="chat-container">
+                    <div class="chat-list">
+                        <h2>Chats</h2>
+                       <!-- <input type="text" id="recipientInput" placeholder="Search or start a new chat">
+                        <button onclick="startChat()">Start Chat</button> -->
+                        <button onclick="showTeachers()">View Teachers</button>
+                        <div id="chatList" class="chat-list-items"></div>
+                    </div>
+                    <div class="chat-area">
+                        <button id="toggleChatList" class="chat-list-button" style="display: none;">Toggle Chat List</button>
+                        <div id="recipientName" class="recipient-name"><span id="recipientNameText"></span></div>
+                        <div id="messages" class="messages"></div>
+                        <div class="message-input">
+                            <textarea id="messageInput" placeholder="Type a message"></textarea>
+                            <button onclick="sendMessage()">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Teacher Section -->
+            <div id="teacherSection" class="teacher-section" style="display: none;">
+                <h1>Teachers</h1>
+                <div id="teacherList" class="teacher-list"></div>
+                <button onclick="showChatSection()">Back to Chat</button>
+            </div>
+    
+            <!-- Modal -->
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <h2>Alert</h2>
+                    <p id="modalText">Modal text goes here dynamically.</p>
+                    <button onclick="closeModal()">Close</button>
+                </div>
+            </div>
+        </div>
+    
+      
+        <p class="tagline"></p>
+		<br>
+		<div class="copyrighthome">
+		<p>© CardinalConnect</a></p>
+		</div>
+    </div>
+
+  
+</body></html>
